@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormGroup, FormBuilder,Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-func-add',
@@ -7,7 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FuncAddComponent implements OnInit {
 
-  constructor() { }
+  adicionarFuncionarioForm: FormGroup;
+
+  constructor(private formBuilder: FormBuilder) {
+    this.createForm();
+  }
+  // Método responsavel por tratar as validações do Form que criará um novo Funcionario.
+  createForm() {
+    this.adicionarFuncionarioForm = this.formBuilder.group({
+      nomeFuncionario:['', Validators.required],
+      cargo: ['', Validators.required],
+      numeroIdentificador: ['', Validators.required]
+    })
+
+  }
 
   ngOnInit() {
   }
