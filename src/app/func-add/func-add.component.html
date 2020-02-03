@@ -39,7 +39,7 @@
           </div>
 
           <div class="form-group">
-            <button type="submit" class="btn btn-primary"  [disabled]="adicionarFuncionarioForm.pristine || adicionarFuncionarioForm.invalid"><fa name="plus"></fa> Funcionario</button>
+            <button (click)="adicionarFuncionario(nomeFuncionario.value, cargo.value, numeroIdentificar.value)" class="btn btn-primary"  [disabled]="adicionarFuncionarioForm.pristine || adicionarFuncionarioForm.invalid"><fa name="plus"></fa> Funcionario</button>
           </div>
 
 
