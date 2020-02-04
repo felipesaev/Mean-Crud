@@ -1,0 +1,9 @@
+build/
+
+node_modules/
+npm-degub.log/
+.npm/
+
+.DS_Store
+.AppleDouble
+.LSOverride
