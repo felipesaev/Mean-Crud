@@ -22,7 +22,7 @@ app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 app.use(morgan('dev'));
 app.use(cors());
 
-app.use('/', index);
+app.use('/api', index);
 app.use('/funcionario', funcionarioRoute) ; // localhost:8000/api/funcionario/GET|PUT
 
 
